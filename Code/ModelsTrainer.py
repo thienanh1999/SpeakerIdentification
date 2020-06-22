@@ -2,7 +2,7 @@ import os
 import pickle
 import warnings
 import numpy as np
-from sklearn.mixture import GMM
+from sklearn.mixture import GaussianMixture as GMM
 from scipy.io.wavfile import read
 from extract_features import extract_features
 
@@ -45,7 +45,7 @@ def train_model():
                     print("ValueError: Shape does not match")
 
         # gmm
-        gmm = GMM(n_components=16, n_iter=200, covariance_type='diag', n_init=3)
+        gmm = GMM(n_components=16, max_iter=200, covariance_type='diag', n_init=3)
         gmm.fit(features)
 
         # export trained model
