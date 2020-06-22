@@ -32,12 +32,10 @@ This script require the follwing modules/libraries:
 * [numpy](http://www.numpy.org/) & [scipy](https://www.scipy.org/) & [scikit-learn](https://scikit-learn.org/stable/) & [python_speech_features](https://github.com/jameslyons/python_speech_features)
 
 ## Code & scripts
-- [Run.py](Run.py) : This is the main script and it will run the whole cycle (Data management > Models training > Speakers identification)
 - [DataManager.py](Code/DataManager.py): This script is responsible for the extracting and strcturing the data.
 - [ModelsTrainer.py](Code/ModelsTrainer.py):This script is responsible for training the Gaussian Mixture Models (GMM) for each speaker.
 - [SpeakerIdentifier.py](Code/GenderIdentifier.py):This script is responsible for Testing the system by identifying who is speaking in the test files.
-- [FeaturesExtractor.py](Code/FeaturesExtractor.py):This script is responsible for extracting the MFCC features from the .wav files.
-- [SilenceEliminator.py](Code/SilenceEliminator.py): Silence eliminator from .wav files to speed/clean and optimize the input files for the features extraction.
+- [extract_features.py](Code/FeaturesExtractor.py):This script is responsible for extracting the MFCC features from the .wav files.
 
 ## Results and disscussion
 - The code can be further optimized using multi-threading, acceleration libs and multi-processing.
